@@ -1,0 +1,59 @@
+<!-- inputs row -->
+<div class="row pb-3 mb-3 justify-content-center" [class.border-bottom]="inputRowsLength > 1">
+  <!-- inputs -->
+  <div class="row col row-gap-2">
+    <div class="col-12 col-sm-4">
+      <div class="input-group">
+        <span class="input-group-text" id="divider">Divider</span>
+        <input
+          [(ngModel)]="row.divider"
+          name="divider{{ index }}"
+          type="number"
+          class="form-control"
+          [class.is-invalid]="errors['divider'].includes(index)"
+          aria-label="divider"
+          aria-describedby="divider"
+          required
+        />
+      </div>
+    </div>
+    <div class="col-12 col-sm-4">
+      <div class="input-group">
+        <span class="input-group-text" id="remainder">Remainder</span>
+        <input
+          [(ngModel)]="row.remainder"
+          name="remainder{{ index }}"
+          type="number"
+          class="form-control"
+          [class.is-invalid]="errors['remainder'].includes(index)"
+          aria-label="remainder"
+          aria-describedby="remainder"
+          required
+        />
+      </div>
+    </div>
+    <div class="col-12 col-sm-4">
+      <div class="input-group">
+        <span class="input-group-text" id="limit">Limit</span>
+        <input
+          [(ngModel)]="row.limit"
+          name="limit{{ index }}"
+          type="number"
+          class="form-control"
+          [class.is-invalid]="errors['limit'].includes(index)"
+          aria-label="limit"
+          aria-describedby="limit"
+          required
+        />
+      </div>
+    </div>
+  </div>
+  @if (inputRowsLength > 1) {
+  <!-- remove row -->
+  <div class="row col-auto">
+    <button (click)="onDeleteRow()" type="button" class="btn btn-dark">
+      <i class="bi bi-trash3"></i>
+    </button>
+  </div>
+  }
+</div>

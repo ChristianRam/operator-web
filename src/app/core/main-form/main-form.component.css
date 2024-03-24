@@ -1,0 +1,5 @@
+.input-group:has(> .form-control.is-invalid) {
+  .input-group-text {
+    border-color: var(--bs-form-invalid-border-color);
+  }
+}

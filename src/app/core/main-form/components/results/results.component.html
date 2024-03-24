@@ -1,0 +1,25 @@
+<div class="card">
+  <div class="card-header">
+    <div class="d-grid gap-2 d-flex justify-content-between">
+      <h3>Results</h3>
+      <button type="button" class="btn btn-secondary" (click)="goBack()">
+        <i class="bi bi-chevron-left"></i> Back
+      </button>
+    </div>
+  </div>
+  <div class="card-body">
+    <ul class="list-group list-group-flush">
+      @for (result of results; track $index) {
+      <li class="list-group-item d-flex justify-content-between align-items-center gap-1">
+        <span>
+          [ Divider: <b>{{ result.divider }}</b> Remainder: <b>{{ result.remainder }}</b> Limit:
+          <b>{{ result.limit }}</b
+          >]
+        </span>
+        <span>=</span>
+        <span class="badge text-bg-primary rounded-pill">{{ result.result }}</span>
+      </li>
+      }
+    </ul>
+  </div>
+</div>

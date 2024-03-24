@@ -1,0 +1,13 @@
+.main-content {
+  min-height: calc(100% - var(--footer-height));
+
+  .title {
+    h1 {
+      font-weight: bold;
+    }
+    .math-char {
+      font-weight: bold;
+      text-transform: capitalize;
+    }
+  }
+}

@@ -1,0 +1,5 @@
+@if (results.length === 0 || !results) {
+<app-form (setResultsFromFormEventEmitter)="setResults($event)" />
+} @else {
+<app-results (newCalculationEventEmitter)="setResults([])" [results]="results" />
+}
